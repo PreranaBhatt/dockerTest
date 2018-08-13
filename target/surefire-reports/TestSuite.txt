@@ -1,4 +1,16 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.198 s - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.525 s <<< FAILURE! - in TestSuite
+LaunchChrome(test1)  Time elapsed: 0.903 s  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: '463e095e0277', ip: '172.17.0.2', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.93-linuxkit-aufs', java.version: '1.8.0_171'
+Driver info: driver.version: RemoteWebDriver
+	at test1.LaunchChrome(test1.java:20)
+Caused by: java.net.ConnectException: Failed to connect to /192.168.1.10:4444
+	at test1.LaunchChrome(test1.java:20)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at test1.LaunchChrome(test1.java:20)
+
